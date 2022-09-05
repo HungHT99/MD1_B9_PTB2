@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="so1">so 1</label>
+<input type="text" size="10px" id="so1">
+<label for="so2">so 2</label>
+<input type="text" size="10px" id="so2">
+<label for="so3">so 3</label>
+<input type="text" size="10px" id="so3">
+<input  type="button" value="ketQua" onclick="soLonNhat()" >
+<p id="result"> </p>
+<script>
+function soLonNhat() {
+   let number1=document.getElementById('so1').value;
+   let number2=document.getElementById('so2').value;
+   let number3=document.getElementById('so3').value;
+    console.log(number1,number2,number3)
+    let result =document.getElementById('result');
+    if (number1>number2 && number1>number3) {
+        result.innerHTML = number1 + 'la so lon nhat';
+    }else if(number2>number1 && number2>number3){
+        result.innerHTML = number2 + 'la so lon nhat';
+    }else if( number3>number1 && number3>number2){
+        result.innerHTML = number3 + 'la so lon nhat';
+    }
+}
+</script>
+</body>
+</html>
